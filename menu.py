@@ -16,11 +16,15 @@ def iniciar():
         print("========================")
 
         opcion= input('>')
-        
+
         if opcion == '1':
             print('Listando los clientes...\n')
+            for cliente in db.Clientes.lista:
+                print(cliente)
         if opcion == '2':
             print('Buscando un cliente...\n')
+            dni= helpers.leer_texto(3,3,'DNI (2 ints y 1 char').upper()
+            cliente= db.Clientes.buscar(dni)
         if opcion == '3':
             print('Añadiendo un cliente...\n')
         if opcion == '4':
