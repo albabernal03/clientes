@@ -2,6 +2,7 @@ import os
 import helpers
 def iniciar():
     while True:
+        helpers.limpiar_pantalla()
         os.system('clear')
         print("========================")
         print("  Bienvenido AL Manager ") 
@@ -15,6 +16,7 @@ def iniciar():
         print("========================")
 
         opcion= input('>')
+        
         if opcion == '1':
             print('Listando los clientes...\n')
         if opcion == '2':
