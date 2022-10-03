@@ -1,6 +1,7 @@
 import copy # Para copiar objetos
 import unittest # Para hacer pruebas unitarias
 import gestor.database as db # Importamos el modulo database
+import helpers
 
 class TestDatabase(unittest.TestCase):
     def setUp(self): # Se ejecuta antes de cada prueba
@@ -32,7 +33,12 @@ class TestDatabase(unittest.TestCase):
         cliente_borrado = db.Clientes.borrar('48H')
         cliente_rebuscado = db.Clientes.buscar('48H')
         self.assertEqual(cliente_borrado.dni, '48H')
-        self.assertIsNone(cliente_rebuscado)
+    
+    def test_dni_valido(self):
+        self.assertTrue(helpers.dni_valido('00A', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('232323S', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('F35', db.Clientes.lista))
+        self.assertFalse(helpers.dni_valido('48H', db.Clientes.lista))
 
 if __name__ == '__main__':
     unittest.main()
