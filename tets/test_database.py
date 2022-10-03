@@ -1,6 +1,6 @@
 import copy # Para copiar objetos
 import unittest # Para hacer pruebas unitarias
-import Gestor_clientes.database as db # Para importar el modulo database
+import database as db # Para importar el modulo database
 
 class TestDatabase(unittest.TestCase):
     def setUp(self): # Se ejecuta antes de cada prueba
