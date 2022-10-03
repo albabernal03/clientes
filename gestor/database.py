@@ -29,6 +29,7 @@ class Clientes:
     def crear(dni,nombre,apellido):
         cliente = Cliente(dni,nombre,apellido)
         Clientes.lista.append(cliente)
+        Clientes.guardar()
         return cliente
     
     @staticmethod
@@ -37,6 +38,7 @@ class Clientes:
             if cliente.dni == dni:
                 Clientes.lista[i].nombre = nombre
                 Clientes.lista[i].apellido = apellido
+                Clientes.guardar()
                 return Clientes.lista[i]
 
     @staticmethod
@@ -44,6 +46,7 @@ class Clientes:
         for i, cliente in enumerate(Clientes.lista):
             if cliente.dni == dni:
                 cliente= Clientes.lista.pop(i)
+                Clientes.guardar()
                 return cliente
         
     @staticmethod
