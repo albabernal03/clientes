@@ -1,4 +1,5 @@
 import os 
+import helpers
 def iniciar():
     while True:
         os.system('clear')
