@@ -16,7 +16,7 @@ class Clientes:
     lista=[]
     with open(config.DATABASE_PATH, newline='\n') as fichero:
         reader= csv.reader(fichero, delimiter=',')
-        for dni, (nombre, apellido) in reader:
+        for (dni, nombre, apellido) in reader:
             cliente = Cliente(dni, nombre, apellido)
             lista.append(cliente)
 
