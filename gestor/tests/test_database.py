@@ -2,10 +2,12 @@ import copy # Para copiar objetos
 import unittest # Para hacer pruebas unitarias
 import sys
 import pathlib
-sys.path.append(str(pathlib.Path().resolve()) + './gestor')
-import helpers
+import os
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),os.pardir))
 import csv
-import config, database as db
+import database as db
+import helpers
+import config
 
 
 
