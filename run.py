@@ -1,8 +1,8 @@
-import gestor.menu
-import gestor.database
+from gestor.menu import iniciar
+
 
 if __name__ == "__main__":
-    gestor.menu.iniciar()
+    iniciar()
    
     
 

@@ -1,6 +1,6 @@
 import copy # Para copiar objetos
 import unittest # Para hacer pruebas unitarias
-import gestor.database as db # Importamos el modulo database
+import database as db # Importamos el modulo database
 import helpers
 import csv
 import config
