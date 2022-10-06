@@ -4,6 +4,9 @@ import database as db # Importamos el modulo database
 import helpers
 import csv
 import config
+import sys
+import pathlib
+sys.path.append(str(pathlib.Path().resolve()) + './gestor')
 
 class TestDatabase(unittest.TestCase):
     def setUp(self): # Se ejecuta antes de cada prueba
