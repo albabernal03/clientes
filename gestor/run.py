@@ -1,4 +1,4 @@
-from gestor.menu import iniciar
+from menu import iniciar
 
 
 if __name__ == "__main__":
