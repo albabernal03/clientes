@@ -3,10 +3,9 @@ import unittest # Para hacer pruebas unitarias
 import sys
 import pathlib
 sys.path.append(str(pathlib.Path().resolve()) + './gestor')
-import database as db # Importamos el modulo database
 import helpers
 import csv
-import config
+import config, database as db
 
 
 
