@@ -14,7 +14,7 @@ class Cliente:
 
 class Clientes:
     lista=[]
-    with open('gestor/clientes.csv', newline='\n') as fichero:
+    with open('/Users/hectorbernaltrujillo/Documents/informática/Programación python/ff/clientes/gestor/clientes.csv', newline='\n') as fichero:
         reader= csv.reader(fichero, delimiter=',')
         for dni, nombre, apellido in reader:
             cliente = Cliente(dni, nombre, apellido)
@@ -52,8 +52,10 @@ class Clientes:
         
     @staticmethod
     def guardar():
-        with open ('gestor/clientes.csv', 'w', newline='\n') as fichero:
+        with open ('/Users/hectorbernaltrujillo/Documents/informática/Programación python/ff/clientes/gestor/clientes.csv', 'w', newline='\n') as fichero:
             writer = csv.writer(fichero, delimiter=',')
             for cliente in Clientes.lista:
                 writer.writerow((cliente.dni, cliente.nombre, cliente.apellido))
     
+
+
