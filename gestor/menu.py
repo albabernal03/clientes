@@ -1,5 +1,5 @@
 import os 
-from gestor import helpers
+import helpers
 import database as db
 
 def iniciar():
